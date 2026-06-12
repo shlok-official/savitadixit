@@ -8,17 +8,17 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --gold: #B8922A;
-    --gold-light: #E8D89A;
-    --gold-pale: #FAF4E1;
-    --deep: #1A1008;
-    --deep2: #2E1F0A;
-    --text: #2C2416;
-    --muted: #7A6A4F;
-    --border: #D6C49A;
-    --bg: #FDFAF3;
+    --gold: #D4A537;
+    --gold-light: #F2D98A;
+    --gold-pale: #FDF6E3;
+    --deep: #1E3148;
+    --deep2: #234A63;
+    --text: #2A3742;
+    --muted: #6E7F8C;
+    --border: #DCE7EE;
+    --bg: #FBFDFE;
     --white: #FFFFFF;
-    --section-bg: #FBF6EA;
+    --section-bg: #F1F6FA;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -56,7 +56,7 @@
 
   /* ── HERO ── */
   .hero {
-    background: linear-gradient(160deg, #0D2B1A 0%, #1A4A2E 50%, #2D6B45 100%);
+    background: linear-gradient(160deg, var(--deep2) 0%, #2C5773 50%, #3D7494 100%);
     min-height: 92vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,7 +87,7 @@
     font-size: clamp(3rem, 5vw, 4.5rem);
     font-weight: 500;
     line-height: 1.1;
-    color: #FAF4E1;
+    color: #F2F7FB;
     margin-bottom: 0.4rem;
   }
   h1 span { color: var(--gold-light); font-style: italic; }
@@ -96,7 +96,7 @@
     color: var(--gold); margin-bottom: 1.8rem;
   }
   .hero-bio {
-    font-size: 1rem; color: #C9B98F; line-height: 1.8;
+    font-size: 1rem; color: #AFCBDD; line-height: 1.8;
     max-width: 480px; margin-bottom: 2.5rem;
   }
   .hero-cta {
@@ -116,7 +116,7 @@
   .btn-outline {
     border: 1px solid var(--gold); color: var(--gold-light);
   }
-  .btn-outline:hover { background: rgba(184,146,42,0.15); }
+  .btn-outline:hover { background: rgba(212,165,55,0.15); }
   .hero-image {
     position: relative; z-index: 1;
     display: flex; align-items: center; justify-content: center;
@@ -139,7 +139,7 @@
   }
   .hero-photo-placeholder {
     width: 100%; height: 100%;
-    background: linear-gradient(180deg, #3D2C14 0%, #1A1008 100%);
+    background: linear-gradient(180deg, #2C5773 0%, #1E3148 100%);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 1rem;
   }
@@ -155,12 +155,12 @@
     position: relative; z-index: 1;
     padding: 0 4rem 4rem 4rem;
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-    border-top: 1px solid rgba(184,146,42,0.3);
+    border-top: 1px solid rgba(212,165,55,0.3);
     animation: fadeSlideUp 1.1s 0.2s ease both;
   }
   .stat-item {
     padding: 2rem 1.5rem;
-    border-right: 1px solid rgba(184,146,42,0.2);
+    border-right: 1px solid rgba(212,165,55,0.2);
     text-align: center;
   }
   .stat-item:last-child { border-right: none; }
@@ -258,7 +258,7 @@
 
   /* ── STATS STRIP ── */
   .stats-strip {
-    background: #0D2B1A;
+    background: var(--deep2);
     padding: 3.5rem 0;
   }
   .stats-grid {
@@ -266,7 +266,7 @@
   }
   .stats-item {
     text-align: center; padding: 1rem;
-    border-right: 1px solid rgba(184,146,42,0.2);
+    border-right: 1px solid rgba(212,165,55,0.2);
   }
   .stats-item:last-child { border-right: none; }
   .stats-num {
@@ -276,7 +276,7 @@
   }
   .stats-sub {
     font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
-    color: rgba(184,146,42,0.7); margin-top: 0.4rem; display: block;
+    color: rgba(242,217,138,0.8); margin-top: 0.4rem; display: block;
   }
 
   /* ── PATENTS ── */
@@ -290,7 +290,7 @@
     border-left: 3px solid var(--gold);
     transition: box-shadow 0.2s;
   }
-  .patent-card:hover { box-shadow: 0 4px 24px rgba(184,146,42,0.12); }
+  .patent-card:hover { box-shadow: 0 4px 24px rgba(212,165,55,0.14); }
   .patent-id {
     font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--gold); margin-bottom: 0.5rem;
@@ -325,7 +325,7 @@
     position: absolute; top: 0; left: 0; right: 0; height: 3px;
     background: var(--gold);
   }
-  .res-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(26,16,8,0.1); }
+  .res-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(30,49,72,0.12); }
   .res-icon {
     width: 44px; height: 44px; border-radius: 50%;
     background: var(--gold-pale); border: 1px solid var(--border);
@@ -435,11 +435,44 @@
     padding: 1.25rem; border-radius: 2px; text-align: center;
   }
   .member-card p { font-size: 0.88rem; color: var(--muted); }
+  .footprint-grid { grid-template-columns: repeat(4, 1fr); }
+  .footprint-grid .member-card h3 { margin-bottom: 0.3rem; }
+
+  /* ── CAREER / DATA TABLES ── */
+  .data-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--white); border: 1px solid var(--border); border-radius: 2px;
+    overflow: hidden;
+  }
+  .data-table th, .data-table td {
+    padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--border);
+    text-align: left; font-size: 0.86rem; vertical-align: top;
+  }
+  .data-table th {
+    background: var(--section-bg); font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); font-weight: 500;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td.highlight { color: var(--gold); font-weight: 500; }
+  .table-wrap { overflow-x: auto; }
+
+  /* ── COMMUNITY LINK CARD ── */
+  .community-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 2px;
+    padding: 1.5rem; text-decoration: none; color: var(--text);
+    display: flex; flex-direction: column; gap: 0.4rem; transition: all 0.2s;
+  }
+  .community-card:hover { border-color: var(--gold); box-shadow: 0 6px 24px rgba(212,165,55,0.12); }
+  .community-card .comm-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: var(--deep);
+  }
+  .community-card .comm-desc { font-size: 0.82rem; color: var(--muted); }
+  .community-card .comm-link { font-size: 0.74rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem; }
 
   /* ── FOOTER ── */
   footer {
     background: var(--deep);
-    color: rgba(230,210,170,0.7);
+    color: rgba(242,217,138,0.8);
     padding: 3rem 0 2rem;
     text-align: center;
   }
@@ -484,9 +517,11 @@
     .hero-text { padding: 3rem 2rem 2rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .research-cards, .visits-grid, .membership-grid { grid-template-columns: 1fr 1fr; }
+    .footprint-grid { grid-template-columns: repeat(2, 1fr); }
     .patents-grid, .books-grid, .awards-list { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(3,1fr); }
     .phd-grid { grid-template-columns: 1fr; }
+    .data-table th, .data-table td { font-size: 0.78rem; padding: 0.6rem 0.7rem; }
     nav { padding: 0 1rem; }
     .nav-links { gap: 1rem; }
     .nav-links a { font-size: 0.72rem; }
@@ -510,6 +545,7 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#research">Research</a>
+    <a href="#career">Career</a>
     <a href="#patents">Patents</a>
     <a href="#students">Students</a>
     <a href="#publications">Books</a>
@@ -534,11 +570,10 @@
   </div>
   <div class="hero-image">
     <div class="hero-img-frame">
-      <img 
-       src="https://raw.githubusercontent.com/shlok-official/savitadixit/main/Savita%20Dixit%20Profile%20Photo.png" 
-       alt="Dr. Savita Dixit — Professor, MANIT Bhopal"
-       style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;"
-     />
+      <div class="hero-photo-placeholder">
+        <div class="photo-icon">SD</div>
+        <p style="color: var(--gold-light); font-size:0.78rem; text-align:center; padding:0 1rem;">Prof. Dr. Savita Dixit<br><span style="color:var(--muted);">MANIT Bhopal</span></p>
+      </div>
     </div>
   </div>
 
@@ -599,6 +634,13 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-aside">
+        <div class="about-card">
+          <div class="about-card-header">Vision</div>
+          <div class="about-card-body">
+            <p style="font-style:italic; font-size:0.92rem; color:var(--text); line-height:1.7; margin:0;">"To make use of inherent personal and creative potential mingled with hard work so as to carve a niche in the field of Applied Science, Technology and Community Cell."</p>
+          </div>
+        </div>
+
         <div class="about-card">
           <div class="about-card-header">Contact</div>
           <div class="about-card-body">
@@ -680,6 +722,10 @@
         <p>
           Her research—spanning natural product chemistry, biodegradable composites, biodiesel production, and environmental analysis—is actively applied to real-world problems of sustainability and human health. She holds 11 awarded Indian patents and has published over 200 papers in international journals indexed in Scopus, SCI, and SCIE.
         </p>
+        <div style="display:inline-flex; align-items:center; gap:0.75rem; background:var(--gold-pale); border:1px solid var(--border); border-radius:2px; padding:0.9rem 1.25rem; margin-top:0.5rem;">
+          <span style="font-size:1.6rem;">🏅</span>
+          <span style="font-size:0.92rem; color:var(--deep); font-weight:500;">Ranked <strong>4th among all NITs in India</strong> by Google Scholar citation count</span>
+        </div>
       </div>
     </div>
   </div>
@@ -725,11 +771,100 @@
   </div>
 </section>
 
+<!-- CAREER PROGRESSION -->
+<section id="career">
+  <div class="container">
+    <div class="section-label">Career Journey</div>
+    <h2>Academic Career Progression</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Position</th>
+            <th>Duration</th>
+            <th>Experience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sri Satya Sai Institute for Women, B.U. Bhopal</td>
+            <td>Assistant Professor (UGC Post)</td>
+            <td>07/07/1988 – 14/07/1994</td>
+            <td>6 years</td>
+          </tr>
+          <tr>
+            <td>MANIT, Bhopal</td>
+            <td>Assistant Professor</td>
+            <td>14/07/1994 – 01/01/2006</td>
+            <td>10 years 8 months</td>
+          </tr>
+          <tr>
+            <td>MANIT, Bhopal</td>
+            <td>Associate Professor</td>
+            <td>01/01/2006 – 04/06/2010</td>
+            <td>4 years 5 months</td>
+          </tr>
+          <tr>
+            <td>MANIT, Bhopal</td>
+            <td class="highlight">Professor (HAG) — Current</td>
+            <td>04/06/2010 – Till date</td>
+            <td class="highlight">15+ years &amp; ongoing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted); margin-top:1.5rem; font-size:0.9rem;">M.Sc. (1982), M.Phil. (1983) and Ph.D. (1987) in Chemistry — all from Vikram University, Ujjain, School of Studies in Chemistry.</p>
+  </div>
+</section>
+
+<!-- ACADEMIC FOOTPRINT -->
+<section style="background:var(--section-bg);">
+  <div class="container">
+    <div class="section-label">By the Numbers</div>
+    <h2>Academic Footprint</h2>
+    <div class="membership-grid footprint-grid">
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">17</h3>
+        <p>M.Tech. Theses Guided (of 20 total)</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">14</h3>
+        <p>U.G. Projects Listed (of 50 total)</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">46</h3>
+        <p>Conferences Attended</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">124</h3>
+        <p>Lectures Delivered / Keynotes / Talks</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">25</h3>
+        <p>Workshops Organized</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">85</h3>
+        <p>Courses / Workshops / FDPs Attended</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">20</h3>
+        <p>Institute-Level Coordinator Roles</p>
+      </div>
+      <div class="member-card">
+        <h3 style="font-size:1.6rem; color:var(--gold);">100</h3>
+        <p>Selection Committees Served</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PATENTS -->
 <section id="patents" class="patents-section">
   <div class="container">
     <div class="section-label">Intellectual Property</div>
-    <h2>Patents — 11 Awarded · 4 Published</h2>
+    <h2>Patents — 11 Awarded · 5 Published</h2>
     <div class="patents-grid">
       <div class="patent-card">
         <div class="patent-id">Patent No. 350691 · Filed 2014</div>
@@ -825,6 +960,13 @@
           <span class="badge badge-published">Published</span>
         </div>
       </div>
+      <div class="patent-card">
+        <div class="patent-id">Application 202321002381 · Filed 2023</div>
+        <div class="patent-title">An Eco-Friendly Composite</div>
+        <div class="patent-meta">
+          <span class="badge badge-published">Published</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -879,36 +1021,6 @@
           <div class="phd-thesis">Chemical Investigation and Biological Studies of Medicinal plant constituents from Piper betle and Butea monosperma</div>
           <div class="phd-dept">Chemistry, BU</div>
         </div>
-      <div class="phd-entry">
-          <div class="phd-year">2017</div>
-          <div class="phd-name">Sandhya Pal</div>
-          <div class="phd-thesis">Development of Bio-Based Hybrid Polymeric Cation Exchange Membranes for the Electro Dialysis of Sodium Chloride Solution</div>
-          <div class="phd-dept">Chemistry, MANIT</div>
-      </div>
-      <div class="phd-entry">
-          <div class="phd-year">2018</div>
-          <div class="phd-name">Kiran Rohit</div>
-          <div class="phd-thesis">Development and Characterization of Cost Effective Composite From Plastic Waste</div>
-          <div class="phd-dept">Chemistry, MANIT</div>
-      </div>
-      <div class="phd-entry">
-          <div class="phd-year">2018</div>
-          <div class="phd-name">Vijesh Verma</div>
-          <div class="phd-thesis">A Study on Synthesis of Waste Polyethylene Fuel and Assessment of Its Potential as Alternative Fuel for Diesel and Petrol Engine</div>
-          <div class="phd-dept">Chemistry, MANIT</div>
-      </div>
-      <div class="phd-entry">
-          <div class="phd-year">2018</div>
-          <div class="phd-name">Smita Nair (Part Time)</div>
-          <div class="phd-thesis">Investigation of Antihyperglycemic Properties of Common Herbs Tridex Procumbens and Bryophyllum Pinnatum and Synthesis of Herbal Gel for Diabetic Wound Healing</div>
-          <div class="phd-dept">Chemistry, MANIT</div>
-      </div>
-      <div class="phd-entry">
-          <div class="phd-year">2018</div>
-          <div class="phd-name">Kapil Malviya</div>
-          <div class="phd-thesis">Environment Assessment — Water Quality Purification from Aquatic Plants</div>
-          <div class="phd-dept">Civil, MANIT</div>
-      </div>
       </div>
       <div class="phd-timeline">
         <div class="phd-entry">
@@ -935,31 +1047,7 @@
           <div class="phd-thesis">Chemical investigation and anticancer activity of crude and isolated mixture of some medicinal plants of Indian origin</div>
           <div class="phd-dept">Chemistry, MANIT</div>
         </div>
-       <div class="phd-entry">
-         <div class="phd-year">2019</div>
-         <div class="phd-name">Shikha Rana (Part Time)</div>
-         <div class="phd-thesis">Phytochemical Evaluation of Pomegranate Peel and Lemon Peel for Analysis of Potential Haematological and Immunoboosting Properties</div>
-         <div class="phd-dept">Chemistry, MANIT</div>
-       </div>
-       <div class="phd-entry">
-         <div class="phd-year">2020</div>
-         <div class="phd-name">Bikramjeet Singh</div>
-         <div class="phd-thesis">To Study the Effects of Waste Generated by the Products of Thermoplastics and Thermosetting Plastics and Their Effective Management</div>
-         <div class="phd-dept">Mechanical, MANIT</div>
-       </div>
-       <div class="phd-entry">
-         <div class="phd-year">2023</div>
-         <div class="phd-name">Mitali Dugvekar</div>
-         <div class="phd-thesis">Processing and Characterization of Fiber Reinforced Composites Using Recycled Waste</div>
-         <div class="phd-dept">Chemistry, MANIT</div>
-       </div>
-       <div class="phd-entry">
-         <div class="phd-year">Registered Aug. 2019</div>
-         <div class="phd-name">Yashwant Yadav</div>
-         <div class="phd-thesis">Development and Characterization of High Performance Hybrid Polymer Composite Material from Waste PET using Chemical Recycling</div>
-         <div class="phd-dept">Mechanical, MANIT</div>
-      </div>
-       <div class="phd-entry">
+        <div class="phd-entry">
           <div class="phd-year">2026</div>
           <div class="phd-name">Subodh Kumar</div>
           <div class="phd-thesis">Fabrication and characterization of hybrid metal matrix composites by stir casting technique</div>
@@ -1025,6 +1113,79 @@
         <div class="visit-purpose">International Presentation at WASET, April 25–26, 2016</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- RESEARCH CONSULTANCY PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Funded Research</div>
+    <h2>Research Consultancy Projects — 7 Completed</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Sponsoring Agency</th>
+            <th>Project Title</th>
+            <th>Amount Sanctioned</th>
+            <th>Period</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MPCST</td>
+            <td>To Investigate the Role of Enzyme in the Production of Degummed Biodiesel from Vegetable Oil for CI Engine</td>
+            <td class="highlight">₹4,92,000</td>
+            <td>2011–2014</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>MANIT AID</td>
+            <td>Antioxidant and Anticancer Activity of Combination of Some Medicinal Plants of Indian Origin</td>
+            <td class="highlight">₹14.36 lac</td>
+            <td>2012–2014</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>MANIT</td>
+            <td>Transesterification of Biodiesel</td>
+            <td class="highlight">₹12 lac</td>
+            <td>2012–2014</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>MPCST</td>
+            <td>Rubaroo</td>
+            <td class="highlight">₹50,000</td>
+            <td>2011–2012</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>MPCST</td>
+            <td>Prayas</td>
+            <td class="highlight">₹50,000</td>
+            <td>2013–2014</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>MPCST</td>
+            <td>Rajbhasha</td>
+            <td class="highlight">₹80,000</td>
+            <td>2013–2014</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>MPCST</td>
+            <td>Rajbhasha</td>
+            <td class="highlight">₹90,000</td>
+            <td>2014–2015</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted); margin-top:1.5rem; font-size:0.9rem;">Total sanctioned funding across all consultancy projects: approximately <strong style="color:var(--gold);">₹32.68 lac</strong>.</p>
   </div>
 </section>
 
@@ -1119,9 +1280,70 @@
     </div>
   </div>
 </section>
+
+<!-- KEYNOTE LECTURES -->
+<section style="background: var(--section-bg);">
+  <div class="container">
+    <div class="section-label">Invited Talks · 124 Lectures Delivered</div>
+    <h2>Keynote & Invited Lectures</h2>
+    <div class="patents-grid">
+      <div class="patent-card">
+        <div class="patent-id">2016 · MANIT Bhopal</div>
+        <div class="patent-title">Keynote — Biofuels and Bioenergy: International Conference and Exhibition</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">2016 · HETIS, Chandigarh</div>
+        <div class="patent-title">Keynote — Green Technology and Innovation</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">22 April 2017 · JNCT</div>
+        <div class="patent-title">Keynote Address — National Conference</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">19–20 Sep 2019 · Kalinga University, Raipur</div>
+        <div class="patent-title">Keynote Speaker — National Conference</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">17–19 Feb 2023 · GLA University, Mathura</div>
+        <div class="patent-title">Keynote — "Waste to Best", ACFP-23 (Advancement in Core and Frontier of Physics)</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">4–8 Dec 2023 · Career College, Govindpura, Bhopal</div>
+        <div class="patent-title">Keynote — "Outcome Based Research for Quality Assurance"</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">12 May 2023 · RGTU, UIT Shivpuri</div>
+        <div class="patent-title">Guest of Honour, National Technology Day — "Green Technology and Innovation in Everyday Life"</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">18 March 2023 · Vikram University, Ujjain</div>
+        <div class="patent-title">Keynote — "Bio-innovation Towards Emerging Nutricereals: Millets"</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">13–14 June 2024 · Sagar Institute of Research &amp; Technology, Bhopal</div>
+        <div class="patent-title">Keynote — Interdisciplinary Approach in Technology, Science &amp; Management for Sustainable Development</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">1 Nov 2025 · GLA University, Mathura</div>
+        <div class="patent-title">Keynote — "Green Chemistry and Eco Innovation", 4th International Conference ACFP</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">8–9 Jan 2026 · MANIT Bhopal</div>
+        <div class="patent-title">Co-Chairperson — International Conference, Innovation in Chemistry</div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-id">2020 · IIT Roorkee &amp; SVNIT Surat</div>
+        <div class="patent-title">Session Chair &amp; Hindi Paper Presentations — National Jal Sangoshthi, IIT Roorkee; Research Writing in Hindi, SVNIT Surat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION / AWARDS -->
+<section id="awards" class="awards-section">
   <div class="container">
     <div class="section-label">Recognition</div>
-    <h2>Awards & Honours — 20+</h2>
+    <h2>Awards & Honours — 40+</h2>
     <div class="awards-list">
       <div class="award-item">
         <span class="award-dot"></span>
@@ -1187,6 +1409,64 @@
         <span class="award-dot"></span>
         <div class="award-text"><strong>Top 51 Influential Women</strong> — Nari Shakti Ko Pranam, Brijbhoomi Foundation, People's College Bhopal</div>
       </div>
+      <div class="award-item">
+        <span class="award-dot"></span>
+        <div class="award-text"><strong>Social Service Award — "Abhinandan Patra"</strong> — Kadambini Shiksha Avam Samaj Kalyaan Seva Samiti, M.P., 2016</div>
+      </div>
+      <div class="award-item">
+        <span class="award-dot"></span>
+        <div class="award-text"><strong>Kalptaru Award</strong> — IIFM Nukkad Natak, 2014</div>
+      </div>
+      <div class="award-item">
+        <span class="award-dot"></span>
+        <div class="award-text"><strong>M.P. Padam Bhushan Award</strong> — Most Innovative Professor of the Year, 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC LEADERSHIP -->
+<section style="background:var(--section-bg);">
+  <div class="container">
+    <div class="section-label">Institutional Trust</div>
+    <h2>Academic Leadership & Governing Bodies</h2>
+    <div class="membership-grid">
+      <div class="member-card">
+        <h3>Governing Body</h3>
+        <p>St. Joseph Engineering College, Mangaluru<br><em>UGC Nominee, 5 years</em></p>
+      </div>
+      <div class="member-card">
+        <h3>Governing Body</h3>
+        <p>MIET, Jammu<br><em>UGC Nominee, 10 years</em></p>
+      </div>
+      <div class="member-card">
+        <h3>Governing Body</h3>
+        <p>SVKM's Dwarkadas J. Sanghvi College of Engineering, University of Mumbai<br><em>5 years, from Nov 2019</em></p>
+      </div>
+      <div class="member-card">
+        <h3>Board of Studies</h3>
+        <p>SATI Vidisha & Engineering College, Ujjain</p>
+      </div>
+      <div class="member-card">
+        <h3>Board of Studies</h3>
+        <p>Sri Sathya Sai College for Women, Bhopal<br><em>2020–2021</em></p>
+      </div>
+      <div class="member-card">
+        <h3>Board of Studies</h3>
+        <p>Sarojini Naidu Govt. Girls PG College, Bhopal<br><em>2022</em></p>
+      </div>
+      <div class="member-card">
+        <h3>UGC Expert Committee</h3>
+        <p>On-spot Inspection — Vidya Jyothi Institute of Technology, Hyderabad</p>
+      </div>
+      <div class="member-card">
+        <h3>UGC Expert Committee</h3>
+        <p>On-spot Inspection — Stanley College of Engineering & Technology for Women, Hyderabad</p>
+      </div>
+      <div class="member-card">
+        <h3>Faculty Selection Expert</h3>
+        <p>NIT Sikkim, Madan Mohan Malviya University of Technology Gorakhpur, GEC Ujjain & others</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1195,7 +1475,7 @@
 <section>
   <div class="container">
     <div class="section-label">Affiliations</div>
-    <h2>Professional Memberships</h2>
+    <h2>Professional Memberships & Editorial Roles</h2>
     <div class="membership-grid">
       <div class="member-card">
         <h3>MAPAI</h3>
@@ -1203,23 +1483,62 @@
       </div>
       <div class="member-card">
         <h3>APA</h3>
-        <p>Asian Polymer Association<br><em>Life Member</em></p>
+        <p>Asian Polymer Association<br><em>Life Member No. L440</em></p>
       </div>
       <div class="member-card">
         <h3>SPS</h3>
-        <p>The Society of Polymer Science<br><em>Life Member</em></p>
+        <p>The Society of Polymer Science<br><em>Life Member No. 401</em></p>
       </div>
       <div class="member-card">
         <h3>ISTE</h3>
-        <p>Indian Society for Technical Education<br><em>LM-20559</em></p>
+        <p>Indian Society for Technical Education<br><em>LM-20559, Life Member since 1995</em></p>
       </div>
       <div class="member-card">
-        <h3>Omega</h3>
-        <p>Omega Spiritual Cell<br><em>MANIT Bhopal</em></p>
+        <h3>Editor</h3>
+        <p>Journal of Chemistry and Chemical Sciences<br><em>+ Editorial Advisory Board</em></p>
       </div>
       <div class="member-card">
-        <h3>INSPIRE</h3>
-        <p>Inspire Club, MANIT<br><em>Faculty Coordinator since 2010</em></p>
+        <h3>Referee / Reviewer</h3>
+        <p>Multiple international journals & Ph.D. thesis examiner for other universities</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY INITIATIVES -->
+<section style="background:var(--section-bg);">
+  <div class="container">
+    <div class="section-label">Beyond the Lab</div>
+    <h2>Community & Institutional Initiatives</h2>
+    <div class="visits-grid">
+      <a href="https://www.tooryanaad.manit.ac.in" target="_blank" class="community-card">
+        <div class="comm-title">Tooryanaad</div>
+        <div class="comm-desc">Founder & Advisor — MANIT's flagship cultural festival, organised annually since its inception (Sept 2023, 2024)</div>
+        <div class="comm-link">tooryanaad.manit.ac.in ↗</div>
+      </a>
+      <a href="https://www.rashtraay.org" target="_blank" class="community-card">
+        <div class="comm-title">Rashtraay</div>
+        <div class="comm-desc">Faculty Coordinator — Nukkad Natak (street theatre) initiative for social awareness at MANIT</div>
+        <div class="comm-link">rashtraay.org ↗</div>
+      </a>
+      <a href="https://www.manitprayas.weebly.com" target="_blank" class="community-card">
+        <div class="comm-title">Prayas</div>
+        <div class="comm-desc">Founder & Coordinator — Social Service Community Cell, MPCST-funded social outreach programme</div>
+        <div class="comm-link">manitprayas.weebly.com ↗</div>
+      </a>
+      <a href="https://www.purgemanit.in" target="_blank" class="community-card">
+        <div class="comm-title">Purge</div>
+        <div class="comm-desc">Environmental and sustainability initiative at MANIT Bhopal</div>
+        <div class="comm-link">purgemanit.in ↗</div>
+      </a>
+      <a href="https://www.manit.ac.in" target="_blank" class="community-card">
+        <div class="comm-title">INSPIRE Club & Omega</div>
+        <div class="comm-desc">Faculty Coordinator (INSPIRE Club, since 2010) and Coordinator (Omega Spiritual Society)</div>
+        <div class="comm-link">manit.ac.in ↗</div>
+      </a>
+      <div class="community-card" style="cursor:default;">
+        <div class="comm-title">Editor — Excelsior & Shaurya</div>
+        <div class="comm-desc">Hindi Editor for MANIT's institute-level magazines since 2011; organiser of Rajbhasha Hindi Pakhwada (2021, 2022, 2024) and World Environment Week (2022)</div>
       </div>
     </div>
   </div>
